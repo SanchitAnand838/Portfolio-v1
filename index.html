@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sanchit Portfolio</title>
+  <style>
+
+    :root {
+      --color1: #63cdda;
+      --color2: #2c3e50;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      margin: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    
+    .top-container {
+      background-color: var(--color1);
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 50px;
+      display: block;
+      flex-wrap: nowrap;
+      box-sizing: content-box;
+    }
+
+    @keyframes name-animation {
+      from {
+        background-position-x: -1000px;
+      }
+      to {
+        background-position-x: 1000px;
+      }
+    }
+    
+    .name {
+      font-size: 90px;
+      margin: 50px auto 0 auto;
+      background: linear-gradient(75deg, var(--color2) 49%, #fff 51%, var(--color2) 52%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-position-x: -500px;
+      animation: 1.5s ease-in-out normal infinite name-animation;
+      z-index: 999;
+      position: sticky;
+    }
+    
+    nav {
+      background-color: var(--color2);
+      height: 80px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 75px;
+    }
+
+    nav ul li {
+      color: var(--color1);
+      font-size: 20px;
+      font-weight: 500;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: all .2s ease-out;
+      width: 200px;
+    }
+
+    nav ul li:hover {
+      letter-spacing: 5px;
+      /* transform: scale(115%, 115%); */
+      text-shadow: 0px 0px 20px var(--color1);
+      color: #bbeaf0;
+    }
+
+    .pro {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .cloud {
+      width: 250px;
+      opacity: 1;
+      z-index: 1;
+      position: absolute;
+      top: 80px;
+    }
+
+    .top-cloud {
+      right: 50px;
+    }
+
+    .bottom-cloud {
+      left: 50px;
+    }
+
+    .mountain {
+      position: relative;
+      right: 0;
+      top: 4px;
+      height: 300px;
+      width: 700px;
+    }
+
+    .proo {
+      font-weight: bold;
+      font-size: large;
+      color: var(--color2);
+    }
+
+    .middle-container {
+      background-color: var(--color1);
+      padding: 50px 0;
+    }
+    
+    .obama {
+      width: 300px;
+    }
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Notes</a></li>
+    </ul>
+  </nav>
+  <div class="top-container">
+    <img src="images/cloud.png" alt="This is a cloud" class="cloud top-cloud">
+    <div class="title-text">
+      <h1 class="name">Sanchit Anand</h1>
+      <p class="proo">Another <span class="pro">Cri</span>cketer</p>
+    </div>
+    <img src="images/cloud.png" alt="This is a cloud" class="cloud bottom-cloud">
+    <img class="mountain" src="images/mountain.png" alt="This is a mountain">
+  </div>
+  <hr>
+  <div class="middle-container">
+    <img src="images/profile-pic.jpg" alt="Obama" class="obama">
+  </div>
+</body>
+</html>
